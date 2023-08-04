@@ -13,3 +13,6 @@
 [submodule "libraries/protozero"]
 	path = libraries/protozero
 	url = https://github.com/mapbox/protozero.git
+[submodule "libraries/zlib"]
+	path = libraries/zlib
+	url = https://github.com/madler/zlib.git
