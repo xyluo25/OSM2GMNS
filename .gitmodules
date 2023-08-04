@@ -1,0 +1,15 @@
+[submodule "libraries/bzip2"]
+	path = libraries/bzip2
+	url = https://github.com/libarchive/bzip2.git
+[submodule "libraries/geos"]
+	path = libraries/geos
+	url = https://github.com/libgeos/geos.git
+[submodule "libraries/libexpat"]
+	path = libraries/libexpat
+	url = https://github.com/libexpat/libexpat.git
+[submodule "libraries/libosmium"]
+	path = libraries/libosmium
+	url = https://github.com/osmcode/libosmium.git
+[submodule "libraries/protozero"]
+	path = libraries/protozero
+	url = https://github.com/mapbox/protozero.git

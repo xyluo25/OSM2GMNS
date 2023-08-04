@@ -1,5 +1,6 @@
-*.vscode/*
-*__pycache__/*
+*.vscode/
+*__pycache__/
 *.pyc
 .idea/
 .DS_Store
+cmake-build*/
