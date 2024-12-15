@@ -53,5 +53,3 @@ def getMovementGeometry(ib_link, ob_link):
 
     geometry_xy = geometry.LineString([ib_point, ob_point])
     return geometry_xy
-
-

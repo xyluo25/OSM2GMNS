@@ -23,7 +23,8 @@ _minimum_cutted_length = 2.0
 
 def _checkMovementLinkNecessity(node_dict):
     for node_id, node in node_dict.items():
-        if node.ctrl_type == 'signal': continue
+        if node.ctrl_type == 'signal':
+            continue
 
         if len(node.incoming_link_list) == 1 and len(node.outgoing_link_list) >= 1:
             # one imcoming link
@@ -35,7 +36,8 @@ def _checkMovementLinkNecessity(node_dict):
                 if angle > 0.75 * math.pi or angle < -0.75 * math.pi:
                     angle_flag = False
                     break
-            if not angle_flag: continue
+            if not angle_flag:
+                continue
 
             ob_link_set = set()
             multiple_connection = False
@@ -45,7 +47,8 @@ def _checkMovementLinkNecessity(node_dict):
                     break
                 else:
                     ob_link_set.add(movement.ob_link)
-            if multiple_connection: continue
+            if multiple_connection:
+                continue
 
             node.movement_link_needed = False
             ib_link.downstream_short_cut = True
@@ -63,7 +66,8 @@ def _checkMovementLinkNecessity(node_dict):
                 if angle > 0.75 * math.pi or angle < -0.75 * math.pi:
                     angle_flag = False
                     break
-            if not angle_flag: continue
+            if not angle_flag:
+                continue
 
             ib_link_set = set()
             multiple_connection = False
@@ -73,7 +77,8 @@ def _checkMovementLinkNecessity(node_dict):
                     break
                 else:
                     ib_link_set.add(movement.ib_link)
-            if multiple_connection: continue
+            if multiple_connection:
+                continue
 
             node.movement_link_needed = False
 

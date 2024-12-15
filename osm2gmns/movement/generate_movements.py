@@ -49,7 +49,8 @@ def _generateMovementsForOneNode(node, max_movement_id, GT):
             mvmt.geometry = GT.geo_to_latlon(mvmt.geometry_xy)
             mvmt.generated_by_osm2gmns = True
 
-            if node.ctrl_type == 1: mvmt.ctrl_type = 'signal'               # todo: check ctrl_type
+            if node.ctrl_type == 1:
+                mvmt.ctrl_type = 'signal'               # todo: check ctrl_type
             mvmt.allowed_uses = ib_link.allowed_uses
             node.movement_list.append(mvmt)
             movement_id += 1
@@ -89,7 +90,8 @@ def _generateMovementsForOneNode(node, max_movement_id, GT):
                 mvmt.geometry = GT.geo_to_latlon(mvmt.geometry_xy)
                 mvmt.generated_by_osm2gmns = True
 
-                if node.ctrl_type == 1: mvmt.ctrl_type = 'signal'
+                if node.ctrl_type == 1:
+                    mvmt.ctrl_type = 'signal'
                 mvmt.allowed_uses = ib_link.allowed_uses
                 node.movement_list.append(mvmt)
                 movement_id += 1
